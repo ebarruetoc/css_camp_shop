@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container{
+    grid-area: container;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    
+}
+
+h1, h2, h3, p{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+h1{
+    font-size: 1.4rem;
+}
+
+p, a{
+    font-size: 1rem;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    background-color: #023d0e;
+    color: #fff;
+    padding: 20px 0px;
+}
+
+header > .menu{
+    visibility: hidden;
+    display: none;
+}
+
+.brand{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+.brand-left{
+    display: flex;
+    flex-direction: row;
+}
+
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #302f30;
+    display: flex;
+    height: 10vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    padding: 12px 30px;
+    color: #9c9d9c;
+    text-align: center;
+}
+
+.info-left > ul > li{
+    list-style: none;
+    font-size: small;
+}
+
+.info-social-media{
+    display: flex;
+    flex-direction: row;
+}
+
+.info-social-media > a{
+    padding: 0 5px;
+    color: #fff; 
+}
+
+.banner{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/banner_2.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+.banner > h1{
+    text-align: center;
+}
+
+.banner > a{
+    padding: 15px 20px;
+    background-color: black;
+    border-radius: 30px;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Outfit", sans-serif;
+}
+
+.banner > a:hover{
+    background-color: #03a725;
+    color:#000; 
+    transition: .3s;
+}
+
+.descripcion > .info-wrap{
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+    color: #302f30;   
+}
+
+.info-wrap > h2{
+    padding-bottom: 20px;
+}
+
+
+.galery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 20px;
+    padding-bottom: 50px;
+}
+
+.card{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+    border: solid 0.5px #f3f5f3;
+    border-radius: 3px ;
+    
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+}
+
+.box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 115, 4, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    transform: scale(0);
+    transition: .3s ease;
+}
+
+.card:hover .box{
+    transform: scale(1);
+}
+
+
+@media (min-width: 576px) {
+
+    .container{
+        grid-area: container;
+        display: grid;
+        grid-template-areas:
+        "header main"
+        "header footer";
+        grid-template-columns: 300px 3fr;
+        
+    }
+
+    h1{
+        font-size: 2.8rem;
+    }
+    
+    p, a{
+        font-size: 1.2rem;
+    }
+
+    header{
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        width: 300px;
+        position: fixed;
+        background-color: #023d0e;
+        color: #fff;
+        padding: 20px 0px;
+    }
+    
+    header > .menu{
+        visibility: visible;
+        display: block;   
+    }
+    
+    .menu > ul > li{
+        list-style: none;  
+        text-align: center;
+    }
+    
+    .menu > ul > li > a{
+        text-decoration: none;
+        color: #03a725;
+        font-size: 1.4rem;
+        margin: 20px 0;
+        font-family: "Outfit", sans-serif; 
+    }
+    
+    .menu > ul > li > a:hover{
+        color: #f9ee06;
+        transition: .5s;
+    }
+
+    .brand-right{
+        visibility: hidden;
+        display: none;
+    }
+
+    .brand{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    footer{
+        height: 14vh;
+    }
+
+    .info-social-media{
+        padding: 15px 0;
+    }
+
+    
+}
+
+
+
+
